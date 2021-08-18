@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h2> Descendant combinator </h2>
+    <p> Select <strong>all</strong> the elements under a specific ancestor</p>
+    <code>
+    ui li { 
+        list-style-type: disc; // expect that all li are with disc  
+        color: green;
+    }
+    </code>
+    <ul>
+      <li>Descendant of ul - one</li>
+      <li>
+        Descendant - two
+        <ol> <p>dddd</p>
+          <li>Descendant of ul - sub1</li>
+          <li>Descendant of ul - sub2</li>
+        </ol>
+      </li>
+      <li>Descendant of ul - three</li>
+    </ul>
+    </br>
+    <h2> Child combinator </h2>
+    <p>It matches with the direct elements present after a parent...</p>
+
+    <code>
+    .child ol > li {
+            list-style-type: circle;
+            color: green;
+        }  
+    </code>
+    <div class="child">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <ol>    
+                <li> 1.1 direct Descendant of ol follow by li</li>
+                <li> 1.2 </li>
+                <li> 1.3 </li>
+            </ol>
+            <li> two direct Descendant of ol follow by li</li>
+            <li> three direct Descendant of ol follow by li
+                <ol>    
+                    <li> 2.1 direct descendant of ol</li>
+                    <li> 2.2 direct descendant of ol</li>
+                    <li> 2.3 direct descendant of ol</li>
+                </ol>
+            </li>
+        </ul>    
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+code {
+    background-color: black;
+    color: white;
+}
+ul li {
+    list-style-type: disc;
+    color: red;
+}
+
+.child ol > li {
+    list-style-type: circle;
+    color: green;
+}
